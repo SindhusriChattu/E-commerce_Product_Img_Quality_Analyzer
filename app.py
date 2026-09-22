@@ -15,6 +15,15 @@ def load_cnn_model():
         compile=False
     )
 
+try:
+    model = load_cnn_model()
+    st.success("CNN model loaded successfully!")
+
+except Exception as e:
+    st.error("CNN model could not be loaded.")
+    st.code(str(e))
+    st.stop()
+
 model = load_cnn_model()
 
 st.title("🛍️ E-commerce Product Image Quality Analyzer")
