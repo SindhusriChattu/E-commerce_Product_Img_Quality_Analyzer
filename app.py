@@ -10,7 +10,8 @@ from PIL import Image
 # -----------------------------
 
 model = tf.keras.models.load_model(
-    "product_image_quality_cnn.keras"
+    "product_image_quality_cnn.keras",
+    compile=False
 )
 
 
